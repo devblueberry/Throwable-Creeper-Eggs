@@ -45,5 +45,11 @@ public class EggHandler {
         Arrays.stream(EggType.values())
                 .filter(eggType -> itemStack.getEnchantments().containsKey(eggType.getEnchantment()))
                 .forEach(eggType -> snowball.setMetadata(eggType.name(), new LazyMetadataValue(plugin, () -> true)));
+
+        if (itemStack.getAmount() > 1) {
+            itemStack.setAmount(itemStack.getAmount() - 1);
+        } else {
+            player.setItemInHand(null);
+        }
     }
 }
