@@ -1,0 +1,7 @@
+name: ThrowableCreeperEggs
+version: ${pom.basedir}
+author: blueberrydev
+main: io.github.devblueberry.creepers.ThrowableCreeperEggPlugin
+commands:
+  egg:
+    aliases: [giveegg, egggive]
